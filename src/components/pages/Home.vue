@@ -3,26 +3,31 @@
     <PageHeader/>
     <div>
       <h1>Just a little button</h1>
-      <button @click="increment">Value is {{ count }}</button>
+      <button @click="increment">Value is {{ testCount }}</button>
     </div>
   </div>
 </template>
 
 <script>
 import PageHeader from '../elements/PageHeader.vue';
+import { ref } from 'vue'
 
 export default {
   setup(){
     const testCount = ref(0)
 
     function increment(){
-      count.value++
+      testCount.value++
     }
 
     return { 
       testCount,
       increment
     }
+  },
+
+  components: {
+    PageHeader
   },
 
   name: 'HomePage',
@@ -77,6 +82,4 @@ nav li a:hover {
   font-weight: bold;
   transition: .1s ease-out;
 }
-
-
 </style>
