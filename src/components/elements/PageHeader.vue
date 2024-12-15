@@ -12,7 +12,7 @@ const pageTitles = ref([
 <template>
   <header>
     <div>
-      <h2>Portfolio</h2>
+      <h2>My Portfolio</h2>
     </div>
     <div>
       <h1>Thomas Jones</h1>
@@ -20,6 +20,7 @@ const pageTitles = ref([
     <div>
       <nav>
         <ul>
+          <!--When pages are done, add <a href> elements under each <li> item-->
           <li v-for="title in pageTitles" :key="title.id">
             {{ title.name }}
           </li>
